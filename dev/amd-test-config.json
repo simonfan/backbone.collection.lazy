@@ -1,0 +1,6 @@
+{
+	"testsBaseUrl": "tests",
+	"tests": [
+		"base"
+	]
+}
