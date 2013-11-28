@@ -1,6 +1,6 @@
 {
   "name": "backbone.collection.lazy",
-  "main": "./src/backbone.collection.lazy.node",
+  "main": "./src/backbone.collection.lazy",
   "version": "0.0.0",
   "dependencies": {
     "amdefine": ">=0.1.0",

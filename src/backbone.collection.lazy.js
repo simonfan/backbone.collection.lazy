@@ -8,7 +8,7 @@
  * @module BackboneCollectionLazy
  */
 
-// dependency names vary for node and npm.
+// dependency names vary for node and requirejs.
 var lazyJsName = typeof define === 'function' ? 'lazy' : 'lazy.js';
 
 /* jshint ignore:start */

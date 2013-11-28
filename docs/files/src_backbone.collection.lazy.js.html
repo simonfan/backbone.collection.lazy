@@ -96,21 +96,44 @@
  * @module BackboneCollectionLazy
  */
 
+// dependency names vary for node and requirejs.
+var lazyJsName = typeof define === &#x27;function&#x27; ? &#x27;lazy&#x27; : &#x27;lazy.js&#x27;;
+
 /* jshint ignore:start */
 if (typeof define !== &#x27;function&#x27;) { var define = require(&#x27;amdefine&#x27;)(module) }
 /* jshint ignore:end */
 
-define([&quot;backbone&quot;,&quot;lazy.js&quot;], function (Backbone, LazyJs) {
-    &#x27;use strict&#x27;;
+define([&#x27;backbone&#x27;, lazyJsName], function (Backbone, Lazy) {
+	&#x27;use strict&#x27;;
 
-    console.log(&#x27;BackboneCollectionLazy running!&#x27;);
+	/**
+	 * Lazy MUST be defined in amdconfig shim!
+	 */
 
-    var BackboneCollectionLazy = function BackboneCollectionLazy() {
+	var LazyCollection = Backbone.Collection.extend({});
 
-    };
+	// Underscore methods that we want to implement on the Collection.
+	// 90% of the core usefulness of Backbone Collections is actually implemented
+	// right here:
+	var methods = [&#x27;forEach&#x27;, &#x27;each&#x27;, &#x27;map&#x27;, &#x27;collect&#x27;, &#x27;reduce&#x27;, &#x27;foldl&#x27;,
+		&#x27;inject&#x27;, &#x27;reduceRight&#x27;, &#x27;foldr&#x27;, &#x27;find&#x27;, &#x27;detect&#x27;, &#x27;filter&#x27;, &#x27;select&#x27;,
+		&#x27;reject&#x27;, &#x27;every&#x27;, &#x27;all&#x27;, &#x27;some&#x27;, &#x27;any&#x27;, &#x27;include&#x27;, &#x27;contains&#x27;, &#x27;invoke&#x27;,
+		&#x27;max&#x27;, &#x27;min&#x27;, &#x27;toArray&#x27;, &#x27;size&#x27;, &#x27;first&#x27;, &#x27;head&#x27;, &#x27;take&#x27;, &#x27;initial&#x27;, &#x27;rest&#x27;,
+		&#x27;tail&#x27;, &#x27;drop&#x27;, &#x27;last&#x27;, &#x27;without&#x27;, &#x27;difference&#x27;, &#x27;indexOf&#x27;, &#x27;shuffle&#x27;,
+		&#x27;lastIndexOf&#x27;, &#x27;isEmpty&#x27;, &#x27;chain&#x27;, &#x27;sample&#x27;];
 
+	function mix(method) {
+		LazyCollection.prototype[method] = function () {
+			var lazy = Lazy(this.models),
+				args = Array.prototype.slice.call(arguments);
 
-    return BackboneCollectionLazy;
+			return lazy[method].apply(lazy, args);
+		};
+	}
+
+	Lazy(methods).each(mix);
+
+	return LazyCollection;
 });
 
     </pre>

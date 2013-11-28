@@ -28,6 +28,19 @@
         }
     },
     "classes": {},
-    "classitems": [],
-    "warnings": []
+    "classitems": [
+        {
+            "file": "src/backbone.collection.lazy.js",
+            "line": 21,
+            "description": "Lazy MUST be defined in amdconfig shim!",
+            "class": "",
+            "module": "BackboneCollectionLazy"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nLazy MUST be defined in amdconfig shim!",
+            "line": " src/backbone.collection.lazy.js:21"
+        }
+    ]
 }

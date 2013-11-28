@@ -23,7 +23,7 @@ require.config({
 			exports: '_'
 		},
 		lazy: {
-			exports: 'Lazy',
+			exports: 'Lazy'
 		}
 	}
 });

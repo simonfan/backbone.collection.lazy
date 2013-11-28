@@ -103,7 +103,7 @@ module.exports = function (grunt) {
 
 					// exclude these modules AND their dependencies
 					// (excluding your bower dependencies)
-					exclude: ['backbone', 'lazy.js'],
+					exclude: ['backbone', 'lazy'],
 
 					// excludeShallow
 					excludeShallow: [],
@@ -164,5 +164,5 @@ module.exports = function (grunt) {
 	[2] Starts watching files.
 	*/
 
-	grunt.registerTask('default', ['bower', 'yuidoc', 'nodeunit', 'live']);
+	grunt.registerTask('default', ['bower', 'yuidoc', 'nodeunit', 'requirejs', 'live']);
 };
