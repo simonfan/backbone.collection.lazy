@@ -10,12 +10,18 @@
     "latedef": true,
     "newcap": true,
     "noarg": true,
-    "quotmark": "single",
+    "quotmark": false,
     "regexp": true,
     "undef": true,
-    "unused": true,
+    "unused": false,
     "strict": true,
     "trailing": true,
     "smarttabs": true,
-    "white": true
+    "white": true,
+    "globals": {
+        "define": true,
+        "module": false,
+        "exports": false,
+        "QUnit": false
+    }
 }

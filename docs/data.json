@@ -1,0 +1,33 @@
+{
+    "project": {
+        "name": "backbone.collection.lazy",
+        "version": "0.0.0"
+    },
+    "files": {
+        "src/backbone.collection.lazy.js": {
+            "name": "src/backbone.collection.lazy.js",
+            "modules": {
+                "BackboneCollectionLazy": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "BackboneCollectionLazy": {
+            "name": "BackboneCollectionLazy",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/backbone.collection.lazy.js",
+            "line": 5,
+            "description": "AMD and CJS module."
+        }
+    },
+    "classes": {},
+    "classitems": [],
+    "warnings": []
+}

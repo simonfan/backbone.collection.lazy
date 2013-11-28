@@ -1,6 +1,6 @@
 {
   "name": "backbone.collection.lazy",
-  "main": "backbone.collection.lazy.js",
+  "main": "src/backbone.collection.lazy.js",
   "version": "0.0.0",
   "dependencies": {
     "backbone": "~1.1.0",
@@ -12,8 +12,5 @@
     "underscore": "*",
     "jquery": "*",
     "qunit": "*"
-  },
-  "resolutions": {
-    "lazy.js": "~0.2.1"
   }
 }

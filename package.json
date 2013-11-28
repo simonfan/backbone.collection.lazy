@@ -1,11 +1,20 @@
 {
-  "name": "package",
+  "name": "backbone.collection.lazy",
+  "main": "./src/backbone.collection.lazy.node",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "amdefine": ">=0.1.0",
+    "lazy.js": "~0.2.1",
+    "backbone": "~1.1.0"
+  },
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-connect": "*",
     "grunt-bower-requirejs": "*",
-    "grunt-contrib-watch": "*"
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-nodeunit": "*",
+    "grunt-contrib-yuidoc": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-requirejs": "*"
   }
 }
