@@ -1,20 +1,31 @@
 {
   "name": "backbone.collection.lazy",
   "main": "./src/backbone.collection.lazy",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "description": "Substitutes underscore for Lazy.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonfan/backbone.collection.lazy.git"
+  },
   "dependencies": {
     "amdefine": ">=0.1.0",
-    "lazy.js": "~0.2.1",
+    "lazy.js": "~0.3.1",
     "backbone": "~1.1.0"
   },
   "devDependencies": {
-    "grunt": "*",
-    "grunt-contrib-connect": "*",
-    "grunt-bower-requirejs": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-nodeunit": "*",
-    "grunt-contrib-yuidoc": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-requirejs": "*"
+    "grunt": "~0.4.2",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-bower-requirejs": "~0.7.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-yuidoc": "~0.5.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "should": "~2.1.0",
+    "mocha": "~1.15.0",
+    "grunt-simple-mocha": "~0.4.0",
+    "lodash": "~2.4.1"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }

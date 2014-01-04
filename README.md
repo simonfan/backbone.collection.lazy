@@ -1,1 +1,3 @@
-This is a component boilerplate. Add your description here!
+# backbone.collection.lazy
+
+Substitutes underscore for Lazy.js

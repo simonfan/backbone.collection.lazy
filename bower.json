@@ -1,16 +1,18 @@
 {
   "name": "backbone.collection.lazy",
   "main": "src/backbone.collection.lazy.js",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "description": "Substitutes underscore for Lazy.js",
   "dependencies": {
-    "backbone": "~1.1.0",
-    "lazy.js": "~0.2.1"
+    "lazy.js": "~0.3.1",
+    "backbone": "~1.1.0"
   },
   "devDependencies": {
     "requirejs": "*",
     "requirejs-text": "*",
     "underscore": "*",
     "jquery": "*",
-    "qunit": "*"
+    "qunit": "*",
+    "lodash": "~2.4.1"
   }
 }

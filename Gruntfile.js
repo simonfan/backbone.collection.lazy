@@ -27,10 +27,18 @@ module.exports = function (grunt) {
 			}
 		},
 
-		nodeunit: {
-			files: ['test/nodeunit/*.js']
-		},
+		simplemocha: {
+			options: {
+			//	globals: ['should'],
+				timeout: 3000,
+				ignoreLeaks: false,
+			//	grep: '*-test',
+				ui: 'bdd',
+				reporter: 'dot'
+			},
 
+			all: { src: ['test/*.js'] }
+		},
 
 		yuidoc: {
 			compile: {
@@ -63,17 +71,17 @@ module.exports = function (grunt) {
 
 			// src
 			src: {
-				src: ['src/backbone.collection.lazy.js']
+				src: ['src/**/*.js']
 			}
 		},
 
 		watch: {
 			live: {
-				files: ['amdconfig.js', 'src/*.js', 'test/**', 'demo/**', 'docs/**', 'Gruntfile.js'],
+				files: ['amdconfig.js', 'src/**/*.js', 'test/**', 'demo/**', 'docs/**', 'Gruntfile.js'],
 				options: {
 					livereload: true
 				},
-				tasks: ['jshint:gruntfile', 'jshint:src', 'nodeunit']
+				tasks: ['jshint:gruntfile', 'jshint:src', 'simplemocha']
 			},
 
 			bower: {
@@ -103,7 +111,7 @@ module.exports = function (grunt) {
 
 					// exclude these modules AND their dependencies
 					// (excluding your bower dependencies)
-					exclude: ['backbone', 'lazy'],
+					exclude: ["lazy", "backbone"],
 
 					// excludeShallow
 					excludeShallow: [],
@@ -142,7 +150,7 @@ module.exports = function (grunt) {
 	configuration script (amdconfig.js).
 	*/
 
-	grunt.loadNpmTasks('grunt-contrib-nodeunit');
+	grunt.loadNpmTasks('grunt-simple-mocha');
 
 
 	/**
@@ -157,6 +165,9 @@ module.exports = function (grunt) {
 		});
 	});
 
+	// mocha tests
+	grunt.registerTask('mocha', 'simplemocha');
+
 	// full live
 	grunt.registerTask('live', ['child-process-server', 'watch:live']);
 	/**
@@ -164,5 +175,5 @@ module.exports = function (grunt) {
 	[2] Starts watching files.
 	*/
 
-	grunt.registerTask('default', ['bower', 'yuidoc', 'nodeunit', 'requirejs', 'live']);
+	grunt.registerTask('default', ['bower', 'yuidoc', 'jshint:gruntfile', 'jshint:src', 'requirejs', 'simplemocha', 'live']);
 };
