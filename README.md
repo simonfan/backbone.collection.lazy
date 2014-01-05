@@ -1,3 +1,3 @@
 # backbone.collection.lazy
 
-Substitutes underscore for Lazy.js
+Backbone collection using Lazy.js instead of underscore.

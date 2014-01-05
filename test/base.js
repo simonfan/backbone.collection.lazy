@@ -2,7 +2,7 @@
 
 	var mod = typeof define !== 'function' ?
 		// node
-		'.././src/backbone.collection.lazy' :
+		'../src' :
 		// browser
 		'backbone.collection.lazy',
 		// dependencies for the test

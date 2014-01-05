@@ -1,8 +1,8 @@
 {
   "name": "backbone.collection.lazy",
-  "main": "src/backbone.collection.lazy.js",
-  "version": "0.0.0",
-  "description": "Substitutes underscore for Lazy.js",
+  "main": "built/backbone.collection.lazy.js",
+  "version": "0.1.0",
+  "description": "Backbone collection using Lazy.js instead of underscore.",
   "dependencies": {
     "lazy.js": "~0.3.1",
     "backbone": "~1.1.0"

@@ -1,8 +1,8 @@
 {
   "name": "backbone.collection.lazy",
-  "main": "./src/backbone.collection.lazy",
-  "version": "0.0.0",
-  "description": "Substitutes underscore for Lazy.js",
+  "main": "./src",
+  "version": "0.1.0",
+  "description": "Backbone collection using Lazy.js instead of underscore.",
   "repository": {
     "type": "git",
     "url": "https://github.com/simonfan/backbone.collection.lazy.git"

@@ -12,7 +12,8 @@
 	<script type="text/javascript">
 
 		require(['../amdconfig'], function(undef) {
-            require(['mocha','text!test/tests.json'], function(mocha, tests) {
+			// now that amdconfig is loaded, the base url is /src
+            require(['mocha','text!../test/tests.json'], function(mocha, tests) {
 
                 // use mocha with bdd
                 mocha.setup('bdd');
